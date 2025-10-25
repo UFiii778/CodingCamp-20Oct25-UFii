@@ -3,82 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio UFii</title>
+    <title>My Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- CSS External File-->
-    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
 
-    <!--Header Content-->
     <header class="main-header">
         <div class="main-logo"></div>
-
-        <nav class="flex">
-            <a class="border rounded p-2" href="#home-page">Home</a>
-            <a class="border rounded p-2" href="#profile-page">Our Profile</a>
-            <a class="border rounded p-2" href="#porto-page">Portofolio</a>
-            <a class="border rounded p-2" href="#message-page">Message Us</a>
+        
+        <nav class="flex space-x-4">
+            <a class="nav-link" href="#home-page">Home</a>
+            <a class="nav-link" href="#profile-page">Our Profile</a>
+            <a class="nav-link" href="#porto-page">Portofolio</a>
+            <a class="nav-link" href="#message-page">Message Us</a>
         </nav>
     </header>
 
-    <hr />
-
-    <!--Main Content-->
     <main>
-        <!--Home-->
-        <section id="home-page" class="hero-section p-4 min-h-[500px]">
-            <h1 class="text-3xl font-bold mb-4"><span id="greet-name"></span>Hello And Welcome to My Portofolio</h1>
-            <p class="text-lg">Ini adalah website latihan.</p>
-        </section>
-
-        <hr />
-
-        <!--Our Profile-->
-        <section id="profile-page" class="profile-section p-4 min-h-[500px]">
-            <h2 class="text-2xl font-bold mb-4">Our Profile</h2>
-            <p class="text-lg">Profile UFiii</p>
-        </section>
-
-        <hr />
-
-        <!--Portofolio-->
-        <section id="porto-page" class="portofolio-section p-4 min-h-[500px]">
-            <h2 class="text-2xl font-bold mb-4">Portofolio</h2>
-            <p class="text-lg">My Porto</p>
-        </section>
-
-        <hr />
-
-        <section id="message-page" class="message-section p-4 min-h-[500px]">
-            <h2 class="text-2xl font-bold mb-4">Message Us</h2>
-            <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <section id="home-page" class="hero-section"> 
             
-            <form>
-                <label for="name" class="block-mb-2">Name:</label>
-                <input type="text" id="name-input" name="name" class="border p-2 mb-4 w-full" required>
+            <div class="hero-content-container"> 
+                <h1 class="text-2xl font-semibold mb-2"><span id="greet-name"></span>, Welcome To Website</h1>
+                <p class="text-md">Ini adalah website latihan pertama</p>
+                <div class="box-visual"></div>
+            </div>
+            
+        </section>
 
-                <label for="email" class="block-mb-2">Email:</label>
-                <input type="email" id="email-input" name="email" class="border p-2 mb-4 w-full" required>
+...
+        <hr />
 
-                <label for="message" class="block-mb-2">Message</label>
-                <textarea id="message-input" name="message" class="border p-2 mb-4 w-full" rows="4" required></textarea>
-            </form>
+        <section id="profile-page" class="profile-section py-12 px-8  text-white"> 
+            <h2 class="text-3xl font-bold mb-10 text-center">Profile</h2> 
+            
+            <div class="expertise-grid grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <div class="expertise-card bg-gray-800 p-6 rounded-xl shadow-2xl">
+                    <div class="icon-box text-orange-400 mb-4">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Frontend Development</h3>
+                    <p class="text-gray-400">React, Vue, HTML5, CSS3, JavaScript</p>
+                </div>
 
-            <button onclick="validateForm();" class="bg-blue-500 text-white p-2 rounded">Send Message </button>
+                <div class="expertise-card bg-gray-800 p-6 rounded-xl shadow-2xl">
+                    <div class="icon-box text-green-400 mb-4">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Ai engineer</h3>
+                    <p class="text-gray-400">Python, MongoDB, Teachble</p>
+                </div>
+
+                <div class="expertise-card bg-gray-800 p-6 rounded-xl shadow-2xl">
+                    <div class="icon-box text-red-400 mb-4">
+                        <i class="fa-solid fa-paintbrush"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+                    <p class="text-gray-400">Figma, Adobe XD, Prototyping, User Testing</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <hr />
+
+        <section id="porto-page" class="p-8 text-center max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Portofolio & Pengenalan</h2>
+            
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg mb-8">
+                <h2 class="text-2xl font-semibold mb-3">Hallo saya luthfi</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Saya adalah salah satu murid yang mengikuti program software engineer di RevoU, dan sebelum nya saya mengikuti course belajar di Dicoding lalu lulus di kompetensi Belajar Dasar Ai (foto sertifikat di bawah text nya)
+                </p>
+            </div>
+
+            <div class="certificate-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="certificate-item bg-white p-4 border border-gray-300 rounded-lg shadow-md">
+                    <img src="img/placeholder-certificate-1.png" alt="Sertifikat RevoU" class="w-full h-auto object-cover rounded mb-2">
+                    <p class="text-sm font-medium text-gray-600">Sertifikat RevoU</p>
+                </div>
+                
+                <div class="certificate-item bg-white p-4 border border-gray-300 rounded-lg shadow-md">
+                    <img src="img/sertifikat.jpg" alt="Sertifikat Dicoding" class="w-full h-auto object-cover rounded mb-2">
+                    <p class="text-sm font-medium text-gray-600">Sertifikat Dicoding</p>
+                </div>
+
+                <div class="certificate-item bg-white p-4 border border-gray-300 rounded-lg shadow-md">
+                    <img src="img/placeholder-certificate-3.png" alt="Sertifikat Lain" class="w-full h-auto object-cover rounded mb-2">
+                    <p class="text-sm font-medium text-gray-600">Sertifikat Lain</p>
+                </div>
+            </div>
+        </section>
+        <hr />
+
+        <section id="headquarter-page" class="headquarter-section p-8 text-center">
+            <h2 class="text-2xl font-bold mb-8">Our Headquarter</h2>
+            
+            <div class="carousel-container relative w-full overflow-hidden">
+                <div class="carousel-wrapper flex transition-transform duration-300 ease-in-out">
+                    <div class="carousel-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                        <img src="img/jakarta.jpeg" alt="Headquarter Jakarta" class="w-full h-64 object-cover rounded-lg shadow-md mb-2">
+                        <p class="text-lg font-semibold">Jakarta</p>
+                    </div>
+                    <div class="carousel-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                        <img src="img/bandung.jpeg" alt="Headquarter Bandung" class="w-full h-64 object-cover rounded-lg shadow-md mb-2">
+                        <p class="text-lg font-semibold">Bandung</p>
+                    </div>
+                    <div class="carousel-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                        <img src="img/951c9d5e-0c96-4b6b-b4ec-878509ef961d.jpeg" alt="Headquarter Surabaya" class="w-full h-64 object-cover rounded-lg shadow-md mb-2">
+                        <p class="text-lg font-semibold">Surabaya</p>
+                    </div>
+                </div>
+
+                <button id="carousel-prev" class="carousel-button absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none">
+                    &#10094;
+                </button>
+                <button id="carousel-next" class="carousel-button absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none">
+                    &#10095;
+                </button>
+            </div>
+        </section>
+        <hr />
+
+        <section id="message-page" class="message-section p-8">
+            <h2 class="text-2xl font-bold mb-4">Message Us</h2>
+            
+            <div class="flex flex-wrap lg:flex-nowrap gap-8">
+                <form id="message-form" class="w-full lg:w-1/2 space-y-4">
+                    <div class="form-group">
+                        <label for="input-name" class="block mb-1">Nama</label>
+                        <input type="text" id="input-name" name="name" class="border p-2 w-full" placeholder="Nama" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-dob" class="block mb-1">Tanggal Lahir</label>
+                        <input type="date" id="input-dob" name="dob" class="border p-2 w-full" value="" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="block mb-1">Jenis Kelamin</label>
+                        <div class="flex space-x-4">
+                            <label><input type="radio" name="gender" value="Laki-Laki" checked> Laki-Laki</label>
+                            <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-message" class="block mb-1">Pesan</label>
+                        <textarea id="input-message" name="message" class="border p-2 w-full" rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="bg-gray-200 text-black px-4 py-2 rounded border border-gray-400 hover:bg-gray-300">Submit</button>
+                </form>
+
+                <div class="w-full lg:w-1/2 p-4 border border-gray-300 shadow-md h-fit">
+                    <p class="mb-4">Current time : <span id="current-time"></span></p>
+                    <div id="result-display" class="space-y-2">
+                        <p><b>Nama</b> : <span id="res-name"></span></p>
+                        <p><b>Tanggal Lahir</b> : <span id="res-dob"></span></p>
+                        <p><b>Jenis Kelamin</b> : <span id="res-gender"></span></p>
+                        <p><b>Pesan</b> : <span id="res-message"></span></p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <!--Footer Content-->
     <footer>
-        <div class="footer-content p-4 text-center">
-            <p class="text-sm">&copy;2025 Luthfi's Portofolio. Web Training </p>
+        <div class="footer-content p-4 text-center text-sm border-t mt-4">
+            <p>Created By Revou</p>
         </div>
     </footer>
 
-    <!-- JavaScript External File-->
-    <script src="js\script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
